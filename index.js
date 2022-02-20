@@ -12,3 +12,16 @@ I need this code, but don't know where, perhaps should make some middleware, don
 
 Pull your server into this file and start it!
 */
+
+const dotenv = require("dotenv").config();
+const express = require("express");
+// const morgan = require("morgan");
+// const helmet = require("helmet");
+const server = express();
+const port  = process.env.PORT || 9000;
+
+server.listen(port, () => {
+    console.log('server running on', port)
+})
+
+
