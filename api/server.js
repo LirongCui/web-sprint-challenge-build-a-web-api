@@ -15,7 +15,7 @@ server.use(express.json());
 server.use(helmet());
 server.use(morgan('dev'));
 server.use('/api/projects', projectRouter);
-// server.use('/api/actions', actionsRouter);
+server.use('/api/actions', actionsRouter);
 
 server.get('/', (req, res) => {
     console.log(res)
